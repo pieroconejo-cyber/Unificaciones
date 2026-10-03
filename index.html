@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Las unificaciones de Italia y Alemania</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@500;700;800&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <a class="saltar" href="#contexto">Saltar al contenido</a>
+
+  <!-- ===================== PORTADA ===================== -->
+  <header class="portada" id="inicio">
+    <div class="portada-lado portada-italia">
+      <figure class="foto foto--retrato">
+        <img src="img/cavour.jpg" alt="Retrato del conde de Cavour" data-hint="Retrato del conde de Cavour">
+        <figcaption>Cavour, jefe de gobierno del Piamonte</figcaption>
+      </figure>
+      <p class="portada-anio">1861</p>
+      <p class="portada-pais">Nace el Reino de Italia</p>
+    </div>
+
+    <div class="portada-centro">
+      <h1>Las unificaciones de Italia y Alemania</h1>
+      <p class="portada-sub">Dos países que nacieron en el mismo siglo, contra el mismo rival y por caminos muy parecidos.</p>
+      <a class="boton" href="#contexto">Empezar</a>
+    </div>
+
+    <div class="portada-lado portada-alemania">
+      <figure class="foto foto--retrato">
+        <img src="img/bismarck.jpg" alt="Retrato de Otto von Bismarck" data-hint="Retrato de Otto von Bismarck">
+        <figcaption>Bismarck, canciller de Prusia</figcaption>
+      </figure>
+      <p class="portada-anio">1871</p>
+      <p class="portada-pais">Nace el Imperio alemán</p>
+    </div>
+  </header>
+
+  <!-- ===================== NAVEGACIÓN ===================== -->
+  <nav class="barra" aria-label="Secciones de la página">
+    <div class="barra-enlaces">
+      <a href="#contexto">Contexto</a>
+      <a href="#italia">Italia</a>
+      <a href="#alemania">Alemania</a>
+      <a href="#cruces">Cruces</a>
+      <a href="#repaso">Repaso</a>
+    </div>
+    <button class="boton boton--chico" id="btnExpo" aria-pressed="false">Modo exposición</button>
+    <div class="barra-progreso" aria-hidden="true"><span id="progreso"></span></div>
+  </nav>
+
+  <main>
+
+    <!-- ===================== CONTEXTO ===================== -->
+    <section class="seccion" id="contexto">
+      <div class="contenedor">
+        <h2>Dos procesos paralelos</h2>
+        <p class="intro">En el siglo XIX, los estados italianos y los estados alemanes se unieron, cada grupo, en un solo país. Los dos procesos se parecen tanto que conviene estudiarlos lado a lado.</p>
+        <p class="instruccion">Toca cada fila para descubrir la respuesta.</p>
+
+        <div class="comparar" id="tablaComparar" data-comparar>
+          <div class="comparar-cabecera" aria-hidden="true">
+            <span></span>
+            <span class="tag tag--it">Italia</span>
+            <span class="tag tag--de">Alemania</span>
+          </div>
+
+          <button class="fila" aria-expanded="false">
+            <span class="fila-dato">Estado que lideró</span>
+            <span class="valor">Reino de Piamonte-Cerdeña</span>
+            <span class="valor">Reino de Prusia</span>
+          </button>
+          <button class="fila" aria-expanded="false">
+            <span class="fila-dato">Líder político</span>
+            <span class="valor">Conde de Cavour (ministro)</span>
+            <span class="valor">Otto von Bismarck (canciller)</span>
+          </button>
+          <button class="fila" aria-expanded="false">
+            <span class="fila-dato">Rey</span>
+            <span class="valor">Víctor Manuel II</span>
+            <span class="valor">Guillermo I</span>
+          </button>
+          <button class="fila" aria-expanded="false">
+            <span class="fila-dato">Gran rival</span>
+            <span class="valor">El Imperio austriaco</span>
+            <span class="valor">El Imperio austriaco</span>
+          </button>
+          <button class="fila" aria-expanded="false">
+            <span class="fila-dato">Qué los unía</span>
+            <span class="valor">Resistir a Austria y sentir un territorio común</span>
+            <span class="valor">Una lengua y una cultura comunes</span>
+          </button>
+          <button class="fila" aria-expanded="false">
+            <span class="fila-dato">Resultado</span>
+            <span class="valor">Reino de Italia (1861), con Roma como capital en 1871</span>
+            <span class="valor">Segundo Reich alemán (1871)</span>
+          </button>
+        </div>
+
+        <div class="acciones">
+          <button class="boton boton--sec" data-revelar-todo="tablaComparar">Mostrar todas las respuestas</button>
+        </div>
+
+        <aside class="clave">
+          <h3>Idea clave</h3>
+          <p>En los dos casos, un Estado fuerte (Piamonte o Prusia) unió a los demás bajo su corona, guiado por un político muy hábil (Cavour o Bismarck) y enfrentándose a Austria.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===================== ITALIA ===================== -->
+    <section class="seccion seccion--italia" id="italia">
+      <div class="contenedor">
+        <p class="parte">Parte 1</p>
+        <h2>La unificación italiana</h2>
+
+        <div class="dos-col">
+          <div>
+            <h3>¿Cómo empezó?</h3>
+            <p>Con las <strong>revoluciones liberales de 1830 y 1848</strong>. En ellas, los italianos sintieron que debían resistir juntos contra Austria y que pertenecían a un mismo territorio.</p>
+
+            <h3>Tres obstáculos en el mapa</h3>
+            <ul class="obstaculos">
+              <li class="obs-norte"><strong>Norte:</strong> el Imperio austriaco controlaba varios estados.</li>
+              <li class="obs-centro"><strong>Centro:</strong> el papa gobernaba los Estados Pontificios.</li>
+              <li class="obs-sur"><strong>Sur:</strong> los Borbones reinaban en Nápoles.</li>
+            </ul>
+          </div>
+          <figure class="foto foto--mapa">
+            <img src="img/mapa-italia-1815.jpg" alt="Mapa de Italia antes de la unificación" data-hint="Mapa de Italia antes de la unificación (1815–1859)">
+            <figcaption>Italia dividida antes de 1859</figcaption>
+          </figure>
+        </div>
+
+        <h3>Tres proyectos para una misma Italia</h3>
+        <p class="instruccion">Pregunta al público: ¿cuál de estos modelos creen que ganó?</p>
+
+        <div class="ganador" data-ganador>
+          <div class="opciones">
+            <article class="opcion">
+              <figure class="foto foto--retrato">
+                <img src="img/mazzini.jpg" alt="Giuseppe Mazzini" data-hint="Retrato de Giuseppe Mazzini">
+              </figure>
+              <h4>Una república</h4>
+              <p>Defendida por <strong>Giuseppe Mazzini</strong> y <strong>Giuseppe Garibaldi</strong>.</p>
+            </article>
+            <article class="opcion">
+              <figure class="foto foto--retrato">
+                <img src="img/gioberti.jpg" alt="Vincenzo Gioberti" data-hint="Retrato de Vincenzo Gioberti">
+              </figure>
+              <h4>Una confederación</h4>
+              <p><strong>Vincenzo Gioberti</strong> quería una unión de Estados que conservaran su propio gobierno.</p>
+            </article>
+            <article class="opcion gana">
+              <figure class="foto foto--retrato">
+                <img src="img/victor-manuel-ii.jpg" alt="Víctor Manuel II" data-hint="Retrato del rey Víctor Manuel II">
+              </figure>
+              <h4>Una monarquía constitucional</h4>
+              <p>El <strong>conde de Cavour</strong> proponía unir Italia alrededor del reino de Piamonte-Cerdeña y su rey, Víctor Manuel II.</p>
+            </article>
+          </div>
+          <button class="boton" data-revelar-ganador>Revelar el modelo que se impuso</button>
+          <p class="ganador-texto">Ganó el proyecto de Cavour: Italia nació como una monarquía constitucional dirigida por la casa de Saboya.</p>
+        </div>
+
+        <h3>Las cuatro etapas</h3>
+        <p class="instruccion">Avanza etapa por etapa mientras explicas.</p>
+
+        <div class="etapas" data-etapas>
+          <div class="etapas-tabs" role="tablist" aria-label="Etapas de la unificación italiana">
+            <button role="tab" id="it-t1" aria-controls="it-p1">1859</button>
+            <button role="tab" id="it-t2" aria-controls="it-p2">1860–61</button>
+            <button role="tab" id="it-t3" aria-controls="it-p3">1866</button>
+            <button role="tab" id="it-t4" aria-controls="it-p4">1870</button>
+          </div>
+
+          <div class="etapa" role="tabpanel" id="it-p1" aria-labelledby="it-t1">
+            <figure class="foto foto--ancha">
+              <img src="img/solferino.jpg" alt="Batalla de Solferino" data-hint="Pintura de la batalla de Solferino (1859)">
+              <figcaption>Batalla de Solferino, 1859</figcaption>
+            </figure>
+            <div class="etapa-texto">
+              <h4>Anexión de Lombardía</h4>
+              <p>Con la ayuda de <strong>Napoleón III</strong> (Francia), el Piamonte derrotó a los austriacos en las batallas de <strong>Magenta y Solferino</strong>.</p>
+              <p>Después, Cavour organizó <strong>plebiscitos</strong> (votaciones del pueblo) para que Parma, Módena y Toscana se unieran al Piamonte.</p>
+              <ul class="resultado">
+                <li class="mas">Lombardía</li>
+                <li class="mas">Parma, Módena y Toscana</li>
+                <li class="menos">Niza y Saboya pasan a Francia</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="etapa" role="tabpanel" id="it-p2" aria-labelledby="it-t2">
+            <figure class="foto foto--ancha">
+              <img src="img/garibaldi-los-mil.jpg" alt="Expedición de los Mil de Garibaldi" data-hint="Garibaldi y la Expedición de los Mil (1860)">
+              <figcaption>Garibaldi y sus «camisas rojas»</figcaption>
+            </figure>
+            <div class="etapa-texto">
+              <h4>Conquista de Nápoles</h4>
+              <p>En 1860, una expedición dirigida por <strong>Garibaldi</strong> conquistó el reino de Nápoles-Dos Sicilias y se lo entregó al Piamonte.</p>
+              <p>En 1861 se reunió el primer <strong>Parlamento nacional italiano</strong> en Turín, que proclamó a <strong>Víctor Manuel II</strong> rey de Italia.</p>
+              <ul class="resultado">
+                <li class="mas">Reino de Nápoles-Dos Sicilias</li>
+                <li class="hito">1861: nace el Reino de Italia</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="etapa" role="tabpanel" id="it-p3" aria-labelledby="it-t3">
+            <figure class="foto foto--ancha">
+              <img src="img/venecia-1866.jpg" alt="Venecia en 1866" data-hint="Mapa del Véneto o entrada italiana en Venecia (1866)">
+              <figcaption>Venecia se une a Italia</figcaption>
+            </figure>
+            <div class="etapa-texto">
+              <h4>Incorporación de Venecia</h4>
+              <p>El Véneto pasó a Italia porque Austria <strong>perdió la guerra contra Prusia</strong> en 1866.</p>
+              <ul class="resultado">
+                <li class="mas">Véneto</li>
+                <li class="cruce">Cruce con Alemania: gracias a Prusia</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="etapa" role="tabpanel" id="it-p4" aria-labelledby="it-t4">
+            <figure class="foto foto--ancha">
+              <img src="img/porta-pia.jpg" alt="Toma de Roma por la brecha de Porta Pia" data-hint="La brecha de Porta Pia, toma de Roma (1870)">
+              <figcaption>Las tropas italianas entran en Roma</figcaption>
+            </figure>
+            <div class="etapa-texto">
+              <h4>Ocupación de Roma</h4>
+              <p>Napoleón III protegía al papa, y eso impedía tomar los Estados Pontificios. Cuando <strong>Francia fue derrotada por Prusia</strong> (1870–1871), las tropas italianas ocuparon la región.</p>
+              <p>Roma fue proclamada <strong>capital de Italia</strong>.</p>
+              <ul class="resultado">
+                <li class="mas">Estados Pontificios</li>
+                <li class="hito">Roma, capital</li>
+                <li class="cruce">Cruce con Alemania: gracias a Prusia</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="etapas-nav">
+            <button class="boton boton--sec" data-prev>Anterior</button>
+            <span class="etapas-cuenta" aria-live="polite"></span>
+            <button class="boton" data-next>Siguiente etapa</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ALEMANIA ===================== -->
+    <section class="seccion seccion--alemania" id="alemania">
+      <div class="contenedor">
+        <p class="parte">Parte 2</p>
+        <h2>La unificación alemana</h2>
+
+        <div class="dos-col">
+          <div>
+            <h3>El punto de partida</h3>
+            <p>A mediados del siglo XIX, Alemania estaba formada por <strong>39 estados</strong> reunidos en la <strong>Confederación Germánica</strong>. Los dos más fuertes, <strong>Austria y Prusia</strong>, competían por controlarla.</p>
+            <p>Los alemanes se sentían una nación porque compartían <strong>lengua y cultura</strong>. Además, la burguesía creó en 1834 el <strong>Zollverein</strong>: una unión aduanera alrededor de Prusia que eliminaba impuestos al comercio entre estados.</p>
+          </div>
+          <figure class="foto foto--mapa">
+            <img src="img/mapa-confederacion-germanica.jpg" alt="Mapa de la Confederación Germánica" data-hint="Mapa de la Confederación Germánica (1815–1866)">
+            <figcaption>La Confederación Germánica</figcaption>
+          </figure>
+        </div>
+
+        <figure class="foto foto--ancha foto--sola">
+          <img src="img/zollverein.jpg" alt="Mapa de la expansión del Zollverein" data-hint="Mapa de la expansión del Zollverein (1834–1866)">
+          <figcaption>El Zollverein unió la economía antes que la política</figcaption>
+        </figure>
+
+        <h3>Dos opciones tras el fracaso del Parlamento de Fráncfort</h3>
+        <p class="instruccion">Pregunta al público: ¿cuál se impuso?</p>
+
+        <div class="ganador" data-ganador>
+          <div class="opciones opciones--dos">
+            <article class="opcion">
+              <figure class="foto foto--retrato">
+                <img src="img/francisco-jose.jpg" alt="Emperador Francisco José I de Austria" data-hint="Retrato del emperador de Austria, Francisco José I">
+              </figure>
+              <h4>Gran Alemania</h4>
+              <p>Todos los estados alemanes <strong>con Austria</strong>, y liderados por ella.</p>
+            </article>
+            <article class="opcion gana">
+              <figure class="foto foto--retrato">
+                <img src="img/guillermo-i.jpg" alt="Guillermo I de Prusia" data-hint="Retrato del rey Guillermo I de Prusia">
+              </figure>
+              <h4>Pequeña Alemania</h4>
+              <p>Los estados alemanes liderados por <strong>Prusia</strong> y <strong>sin Austria</strong>.</p>
+            </article>
+          </div>
+          <button class="boton" data-revelar-ganador>Revelar la opción que se impuso</button>
+          <p class="ganador-texto">Ganó la Pequeña Alemania, gracias al canciller Otto von Bismarck y al rey Guillermo I de Prusia.</p>
+        </div>
+
+        <h3>El plan de Bismarck</h3>
+        <div class="retos">
+          <p><strong>Problema 1:</strong> Austria tenía demasiada influencia sobre los estados alemanes.</p>
+          <p><strong>Problema 2:</strong> los estados católicos del sur no querían ser dirigidos por una Prusia luterana.</p>
+          <p><strong>Su solución:</strong> tres guerras, una tras otra.</p>
+        </div>
+
+        <div class="etapas" data-etapas>
+          <div class="etapas-tabs" role="tablist" aria-label="Guerras de la unificación alemana">
+            <button role="tab" id="de-t1" aria-controls="de-p1">1864</button>
+            <button role="tab" id="de-t2" aria-controls="de-p2">1866</button>
+            <button role="tab" id="de-t3" aria-controls="de-p3">1870–71</button>
+          </div>
+
+          <div class="etapa" role="tabpanel" id="de-p1" aria-labelledby="de-t1">
+            <figure class="foto foto--ancha">
+              <img src="img/ducados-1864.jpg" alt="Guerra de los Ducados" data-hint="Mapa de Schleswig y Holstein o batalla de Dybbøl (1864)">
+              <figcaption>Los ducados de Schleswig y Holstein</figcaption>
+            </figure>
+            <div class="etapa-texto">
+              <h4>Guerra de los Ducados</h4>
+              <p>Schleswig y Holstein tenían población alemana, pero estaban bajo autoridad de <strong>Dinamarca</strong>. Prusia y Austria se aliaron y derrotaron a los daneses.</p>
+              <ul class="resultado">
+                <li class="mas">Schleswig, para Prusia</li>
+                <li class="neutro">Holstein, para Austria</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="etapa" role="tabpanel" id="de-p2" aria-labelledby="de-t2">
+            <figure class="foto foto--ancha">
+              <img src="img/sadowa.jpg" alt="Batalla de Sadowa" data-hint="Pintura de la batalla de Sadowa o Königgrätz (1866)">
+              <figcaption>Batalla de Sadowa, 1866</figcaption>
+            </figure>
+            <div class="etapa-texto">
+              <h4>Guerra contra Austria</h4>
+              <p>Prusia venció en <strong>Sadowa</strong>. Austria quedó fuera del proceso de unificación.</p>
+              <p>Se fundó la <strong>Confederación Alemana del Norte</strong>, dirigida por Prusia.</p>
+              <ul class="resultado">
+                <li class="menos">Austria queda excluida</li>
+                <li class="hito">Confederación Alemana del Norte</li>
+                <li class="cruce">Cruce con Italia: recibe el Véneto</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="etapa" role="tabpanel" id="de-p3" aria-labelledby="de-t3">
+            <figure class="foto foto--ancha">
+              <img src="img/versalles-1871.jpg" alt="Proclamación del Imperio alemán en Versalles" data-hint="Proclamación del Imperio alemán en el Salón de los Espejos de Versalles (1871)">
+              <figcaption>Guillermo I proclamado emperador en Versalles</figcaption>
+            </figure>
+            <div class="etapa-texto">
+              <h4>Guerra franco-prusiana</h4>
+              <p>Tras la victoria prusiana en <strong>Sedán</strong>, cayó el Segundo Imperio francés de Napoleón III.</p>
+              <p><strong>Guillermo I</strong> fue proclamado emperador (<em>Káiser</em>) del <strong>Segundo Reich alemán</strong>. Con el <strong>Tratado de Fráncfort</strong> (1871), Francia cedió Alsacia y Lorena.</p>
+              <ul class="resultado">
+                <li class="mas">Alsacia y Lorena</li>
+                <li class="hito">1871: nace el Imperio alemán</li>
+                <li class="cruce">Cruce con Italia: Roma queda libre</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="etapas-nav">
+            <button class="boton boton--sec" data-prev>Anterior</button>
+            <span class="etapas-cuenta" aria-live="polite"></span>
+            <button class="boton" data-next>Siguiente guerra</button>
+          </div>
+        </div>
+
+        <figure class="foto foto--ancha foto--sola">
+          <img src="img/sedan.jpg" alt="Napoleón III y Bismarck después de Sedán" data-hint="Napoleón III conversando con Bismarck tras la batalla de Sedán (1870)">
+          <figcaption>Napoleón III, prisionero, conversa con Bismarck tras Sedán</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===================== CRUCES / LÍNEA DE TIEMPO ===================== -->
+    <section class="seccion" id="cruces">
+      <div class="contenedor">
+        <h2>Dos historias que se cruzan</h2>
+        <p class="intro">Si ponemos las dos unificaciones en una misma línea de tiempo, aparece algo sorprendente: <strong>las victorias de Prusia terminaron de unificar Italia</strong>.</p>
+
+        <div class="filtros" role="group" aria-label="Filtrar la línea de tiempo">
+          <button data-filtro="todo" aria-pressed="true">Ver todo</button>
+          <button data-filtro="it" aria-pressed="false">Solo Italia</button>
+          <button data-filtro="de" aria-pressed="false">Solo Alemania</button>
+        </div>
+
+        <ol class="linea">
+          <li data-pais="it"><span class="anio">1830</span><div><span class="tag tag--it">Italia</span><p>Revoluciones liberales: nace el deseo de unirse contra Austria.</p></div></li>
+          <li data-pais="de"><span class="anio">1834</span><div><span class="tag tag--de">Alemania</span><p>Se crea el Zollverein, la unión aduanera alrededor de Prusia.</p></div></li>
+          <li data-pais="it"><span class="anio">1848</span><div><span class="tag tag--it">Italia</span><p>Nuevas revoluciones liberales y proyectos de unificación.</p></div></li>
+          <li data-pais="de"><span class="anio">1848</span><div><span class="tag tag--de">Alemania</span><p>Fracasa el Parlamento de Fráncfort: Gran o Pequeña Alemania.</p></div></li>
+          <li data-pais="it"><span class="anio">1859</span><div><span class="tag tag--it">Italia</span><p>Magenta y Solferino: Lombardía se une al Piamonte.</p></div></li>
+          <li data-pais="it"><span class="anio">1860</span><div><span class="tag tag--it">Italia</span><p>Garibaldi conquista Nápoles-Dos Sicilias.</p></div></li>
+          <li data-pais="it"><span class="anio">1861</span><div><span class="tag tag--it">Italia</span><p>Víctor Manuel II, rey de Italia. Parlamento en Turín.</p></div></li>
+          <li data-pais="de"><span class="anio">1864</span><div><span class="tag tag--de">Alemania</span><p>Guerra de los Ducados contra Dinamarca.</p></div></li>
+          <li data-pais="ambos" class="es-cruce"><span class="anio">1866</span><div><span class="tag tag--de">Alemania</span><span class="tag tag--it">Italia</span><p><strong>Prusia vence a Austria en Sadowa</strong>, y por eso Italia recibe el Véneto.</p></div></li>
+          <li data-pais="ambos" class="es-cruce"><span class="anio">1870</span><div><span class="tag tag--de">Alemania</span><span class="tag tag--it">Italia</span><p><strong>Prusia vence a Francia en Sedán</strong>. Napoleón III ya no protege al papa e Italia ocupa Roma.</p></div></li>
+          <li data-pais="de"><span class="anio">1871</span><div><span class="tag tag--de">Alemania</span><p>Guillermo I, Káiser del Segundo Reich. Tratado de Fráncfort: Alsacia y Lorena.</p></div></li>
+          <li data-pais="it"><span class="anio">1871</span><div><span class="tag tag--it">Italia</span><p>Roma, capital de Italia.</p></div></li>
+        </ol>
+
+        <h3>El resultado en el mapa</h3>
+        <div class="dos-col dos-col--iguales">
+          <figure class="foto foto--mapa">
+            <img src="img/mapa-italia-1870.jpg" alt="Mapa de las etapas de la unificación italiana" data-hint="Mapa de las etapas de la unificación italiana (1859–1870)">
+            <figcaption>Italia unificada</figcaption>
+          </figure>
+          <figure class="foto foto--mapa">
+            <img src="img/mapa-alemania-1871.jpg" alt="Mapa de la unificación alemana" data-hint="Mapa de la unificación alemana (1866–1871)">
+            <figcaption>El Imperio alemán en 1871</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== REPASO / QUIZ ===================== -->
+    <section class="seccion" id="repaso">
+      <div class="contenedor">
+        <h2>¿Lo recuerdas?</h2>
+        <p class="intro">Ocho preguntas para comprobar lo aprendido. Ideal para cerrar la exposición con el público.</p>
+        <div class="quiz" id="quiz" aria-live="polite"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <p>Trabajo de Historia: Las unificaciones de Italia y Alemania (siglo XIX).</p>
+      <p>Imágenes: Wikimedia Commons (dominio público).</p>
+    </div>
+  </footer>
+
+  <!-- Visor de imágenes ampliadas -->
+  <dialog class="visor" id="visor">
+    <button class="visor-cerrar" id="visorCerrar" aria-label="Cerrar imagen">✕</button>
+    <img id="visorImg" alt="">
+    <p id="visorTxt"></p>
+  </dialog>
+
+  <!-- Ayuda del modo exposición -->
+  <div class="expo-ayuda" id="expoAyuda" aria-live="polite">
+    <span id="expoCuenta"></span>
+    <span>Flechas ← → para cambiar de sección</span>
+    <span>F: pantalla completa</span>
+    <span>Esc: salir</span>
+  </div>
+
+</body>
+</html>
